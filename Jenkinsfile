@@ -15,7 +15,7 @@ pipeline{
     stage("Push image to JFROG"){
       steps{
         echo 'Tagging and Pushoing Image to JFROG'
-        withCredentials([usernamePassword(credentialsID: 'jfrog-docker-creds', usernameVariable: 'USERNAME', passwordVariable:'PASSWORD')]){
+        withCredentials([usernamePassword(credentialsId: 'jfrog-docker-creds', usernameVariable: 'USERNAME', passwordVariable:'PASSWORD')]){
           sh '''   
               echo "$PASSWORD" | docker login $REGISTRY -u "$USERNAME" --password-stdin
               docker tag my-python-app $IMAGE_NAME
