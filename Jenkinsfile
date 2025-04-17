@@ -29,7 +29,7 @@ pipeline{
     stage('Deploy'){
       steps{
         echo 'pulling image from JFROG'
-        withCredentials([usernamePassword(credentialsID: 'jfrog-docker-creds', usernameVariable: 'USERNAME', passwordVariable:'PASSWORD')]){
+        withCredentials([usernamePassword(credentialsId: 'jfrog-docker-creds', usernameVariable: 'USERNAME', passwordVariable:'PASSWORD')]){
 
           sh ''' 
           
