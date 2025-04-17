@@ -1,7 +1,7 @@
 pipeline{
   agent any
   environment{
-    REGISTRY="trial9il5dp.jfrog.io"
+    REGISTRY="trialt9p4w1.jfrog.io"
     REPO="simply-flask"
     IMAGE_NAME="${REGISTRY}/${REPO}/my-python-app:latest"
   }
